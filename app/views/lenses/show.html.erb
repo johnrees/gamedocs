@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @lens.id %>. <%= @lens.name %></h1>
+
+<%= @lens.description %>
+<ol>
+  <% @lens.questions.each do |question| %>
+    <li><%= question %></li>
+  <% end %>
+</ol>
+
+
+<%= link_to 'Edit', edit_lens_path(@lens) %> |
+<%= link_to 'Back', lenses_path %>

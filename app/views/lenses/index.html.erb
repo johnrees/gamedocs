@@ -1,0 +1,15 @@
+<h1>Listing lenses</h1>
+
+<table>
+<% @lenses.each do |lens| %>
+  <tr>
+    <td class="name"><%= link_to lens, lens %></td>
+    <td><%= link_to 'Edit', edit_lens_path(lens) %></td>
+    <!-- <td><%= link_to 'Destroy', lens, confirm: 'Are you sure?', method: :delete %></td> -->
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lens', new_lens_path %>
